@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body class = "wrapper">
+    <h1>Tech Stacks</h1>
+    <ul class = "list-container">
+        <li class="list-items">Javascript</li>
+    </ul>
+    <script>
+        //Create
+        const addLang = (lang) =>{
+            let newlang = new String();
+            let toUpper = lang.toUpperCase()
+           const newItem = document.createElement("li")
+           newItem.innerHTML = lang
+           if(toUpper == "GOLANG" || toUpper =="TYPESCRIPT"){
+            newItem.style.backgroundColor = "blue"
+            newItem.style.color = "white"
+           }else if(toUpper == "JAVASCRIPT"){
+            newItem.style.backgroundColor = "yellow"
+            newItem.style.color = "black"
+           }
+           
+           newItem.style.borderRadius = "20px"
+           newItem.style.padding = "15px"
+           document.querySelector(".list-container").append(newItem)
+           
+           
+
+        }
+        addLang("JavaScript")
+        addLang("Python")
+        addLang("JAVA")
+        
+        //Edit
+        const secondli  = document.querySelector("li:nth-child(2)")
+        console.log(secondli)
+        const replaceItem = document.createElement("li")
+        replaceItem.textContent = "TypeScript"
+        secondli.replaceWith(replaceItem)
+
+
+        //DElete
+        const thirdli = document.querySelector("li:nth-child(3)")
+        console.log(thirdli)
+        thirdli.remove()
+        
+    </script>
+</body>
+</html>

@@ -26,6 +26,7 @@ submitButton.addEventListener("click" , function(e){
        }else{
            display.innerHTML = `Wrong guess lad`
            document.querySelector(".result").appendChild(display)
+         
            resetGuess(guess)
            
        }

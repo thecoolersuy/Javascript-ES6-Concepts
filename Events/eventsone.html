@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: #414141;
+            color:white;
+        }
+        .unordered{
+            display:flex;
+            flex-direction: row;
+            gap:50px;
+        }
+        .img1{
+            width:150px;
+            height:150px;
+        }
+        .img2{
+            width:150px;
+            height:150px;
+        }
+        .img3{
+            width:150px;
+            height:150px;
+        }
+    </style>
+</head>
+<body>
+    <h1 class=" heading">Images</h1>
+    <div class="lists">
+        <ul class="unordered">
+            <li id="image1" ><img src="https://i.pinimg.com/736x/84/c3/a9/84c3a9a67587e3b4faa728a1d9df08bd.jpg" alt="img1" class="img1"></li>
+            <li id="image2"><img src="https://i.pinimg.com/736x/40/0f/2c/400f2c4837c0d4d8da17adf44a79c62e.jpg" alt="img2" class="img2"></li>
+            <li id="image3"><img src="https://i.pinimg.com/736x/3d/57/49/3d574920481fffef4db99c16e90463c9.jpg" alt="img3" class="img3"></li>
+        </ul>
+    </div>
+    
+</body>
+<script>
+    document.querySelector(".img1").addEventListener("click", function(e){
+        console.log(e.target)
+        //when i click on image1 it swaps to another image
+        const image1 = document.querySelector(".img1")
+        image1.src= "https://i.pinimg.com/736x/95/c8/32/95c832d3fdc774c89a86767ddbe2c056.jpg"
+    })
+
+    document.querySelector(".img2").addEventListener("click" , function(e){
+         console.log(e.target.parentNode)
+         e.target.parentNode.remove()
+    },false)
+</script>
+</html>
